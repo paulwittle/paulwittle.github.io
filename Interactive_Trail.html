@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Quick Start - Leaflet</title>
+	<title>Easter Trail 2025 - Wyke Community Centre</title>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
@@ -18,8 +18,8 @@
 			margin: 0;
 		}
 		.leaflet-container {
-			height: 400px;
-			width: 600px;
+			height: 500px;
+			width: 800px;
 			max-width: 100%;
 			max-height: 100%;
 		}
@@ -41,6 +41,13 @@
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 
+    const trail = L.geoJSON(Easter_trail.geojson, {
+        style: function (feature) {
+            return { color: feature.properties.color };
+        }
+    }).bindPopup(function (layer) {
+        return layer.feature.properties.description;
+    }).addTo(map);
 </script>
 
 
