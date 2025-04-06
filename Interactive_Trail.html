@@ -43,10 +43,8 @@
 
     const trail = L.geoJSON("https://paulwittle.github.io/Easter_trail.geojson", {
         style: function (feature) {
-            return { color: feature.properties.color };
+            return { color: feature.properties.StyleColour };
         }
-    }).bindPopup(function (layer) {
-        return layer.feature.properties.description;
     }).addTo(map);
 </script>
 
