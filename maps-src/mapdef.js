@@ -25,21 +25,29 @@ const styleFunction = function (feature) {
     ];
 
     geometry.forEachSegment(function (start, end) {
-        const dx = end[0] - start[0];
-        const dy = end[1] - start[1];
-        const rotation = Math.atan2(dy, dx);
+        var dx = end[0] - start[0];
+        var dy = end[1] - start[1];
+        var rotation = Math.atan2(dy, dx);
+
+        var lineStr1 = new LineString([end, [end[0] - 200000, end[1] + 200000]]);
+        lineStr1.rotate(rotation, end);
+        var lineStr2 = new LineString([end, [end[0] - 200000, end[1] - 200000]]);
+        lineStr2.rotate(rotation, end);
+
+        var stroke = new Stroke({
+            color: '#a40d05',
+            width: 1,
+        })
+
         // arrows
-        styles.push(
-            new Style({
-                geometry: new Point(end),
-                image: new Icon({
-                    src: 'data/arrow.png',
-                    anchor: [0.75, 0.5],
-                    rotateWithView: true,
-                    rotation: -rotation,
-                }),
-            }),
-        );
+        styles.push(new Style({
+            geometry: lineStr1,
+            stroke: stroke
+        }));
+        styles.push(new Style({
+            geometry: lineStr2,
+            stroke: stroke
+        }));
     });
 
     return styles;
