@@ -35,7 +35,7 @@ const fetchJSON = function(url) {
         });
 }
 
-const geojsonObject = await fetch('./Easter_trail.geojson');
+const geojsonObject = await fetchJSON('./Easter_trail.geojson');
 
 const vectorSource = new VectorSource({
     features: new GeoJSON().readFeatures(geojsonObject),
