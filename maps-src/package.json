@@ -1,0 +1,26 @@
+{
+  "name": "maps",
+  "version": "1.0.0",
+  "description": "Maps for use in personal projects",
+  "author": "Paul Wittle",
+  "targets": {
+    "default": {
+      "distDir": "D:\\Development\\GitHub\\Pages\\maps"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  },
+  "eslintConfig": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build --public-url . index.html"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "ol": "^10.5.0",
+    "parcel": "^2.14.4"
+  }
+}
