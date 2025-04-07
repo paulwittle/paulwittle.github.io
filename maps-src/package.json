@@ -13,7 +13,7 @@
   },
   "eslintConfig": {},
   "scripts": {
-    "build": "rmdir /s /q D:\\Development\\GitHub\\Pages\\maps && parcel build --public-url . index.html && xcopy /E /I /Y data D:\\Development\\GitHub\\Pages\\maps"
+    "build": "rmdir /s /q D:\\Development\\GitHub\\Pages\\maps && parcel build --no-cache --public-url . index.html && xcopy /E /I /Y data D:\\Development\\GitHub\\Pages\\maps"
   },
   "keywords": [],
   "license": "MIT",
