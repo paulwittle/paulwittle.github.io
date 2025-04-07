@@ -2,6 +2,7 @@ import './site.css';
 import Map from 'ol/Map.js';
 import GeoJSON from 'ol/format/GeoJSON.js';
 import OSM from 'ol/source/OSM.js';
+import VectorLayer from 'ol/layer/Vector.js';
 import VectorSource from 'ol/source/Vector.js';
 import TileLayer from 'ol/layer/Tile.js';
 import View from 'ol/View.js';

@@ -13,9 +13,7 @@
   },
   "eslintConfig": {},
   "scripts": {
-    "copy-assets": "xcopy /E /I /Y data D:\\Development\\GitHub\\Pages\\maps",
-    "build": "parcel build --public-url . index.html",
-    "start": "parcel index.html"
+    "build": "rmdir /s /q D:\\Development\\GitHub\\Pages\\maps && parcel build --public-url . index.html && xcopy /E /I /Y data D:\\Development\\GitHub\\Pages\\maps"
   },
   "keywords": [],
   "license": "MIT",
