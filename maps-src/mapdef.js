@@ -8,6 +8,8 @@ import VectorSource from 'ol/source/Vector.js';
 import TileLayer from 'ol/layer/Tile.js';
 import Geolocation from 'ol/Geolocation.js';
 import View from 'ol/View.js';
+import CircleStyle from 'ol/style/Circle.js';
+import Fill from 'ol/style/Fill.js';
 import Point from 'ol/geom/Point.js';
 import Stroke from 'ol/style/Stroke.js';
 import Style from 'ol/style/Style.js';
