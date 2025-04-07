@@ -12,6 +12,10 @@ import Stroke from 'ol/style/Stroke.js';
 import Style from 'ol/style/Style.js';
 import LineString from 'ol/geom/LineString.js';
 
+const view = new View({
+    center: [-275816.0, 6549995.2],
+    zoom: 15,
+});
 
 const styleFunction = function (feature) {
     const geometry = feature.getGeometry();
@@ -147,8 +151,5 @@ const map = new Map({
         vectorLayer,
         locationLayer
     ],
-    view: new View({
-        center: [-275816.0, 6549995.2],
-        zoom: 15,
-    }),
+    view: view,
 });
