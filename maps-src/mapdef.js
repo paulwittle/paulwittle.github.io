@@ -1,4 +1,5 @@
 import './site.css';
+import Feature from 'ol/Feature.js';
 import Map from 'ol/Map.js';
 import GeoJSON from 'ol/format/GeoJSON.js';
 import OSM from 'ol/source/OSM.js';
