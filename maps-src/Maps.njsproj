@@ -29,6 +29,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="data\Easter_trail.geojson" />
     <Content Include="dist\index.html" />
     <Content Include="dist\Maps.4ac85797.css" />
     <Content Include="dist\Maps.4ac85797.css.map" />
@@ -47,6 +48,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="data\" />
     <Folder Include="dist\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
