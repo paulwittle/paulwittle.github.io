@@ -37,9 +37,9 @@ const styleFunction = function (feature) {
         var dy = end[1] - start[1];
         var rotation = Math.atan2(dy, dx);
 
-        var lineStr1 = new LineString([end, [end[0] - 200000, end[1] + 200000]]);
+        var lineStr1 = new LineString([end, [end[0] - 10, end[1] + 10]]);
         lineStr1.rotate(rotation, end);
-        var lineStr2 = new LineString([end, [end[0] - 200000, end[1] - 200000]]);
+        var lineStr2 = new LineString([end, [end[0] - 10, end[1] - 10]]);
         lineStr2.rotate(rotation, end);
 
         var stroke = new Stroke({
