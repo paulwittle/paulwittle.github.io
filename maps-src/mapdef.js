@@ -29,13 +29,13 @@ const styleFunction = function (feature) {
 };
 
 const fetchJSON = function(url) {
-    return fetch(url)
+     return fetch(url)
         .then(function (response) {
             return response.json();
         });
 }
 
-const geojsonObject = fetchJSON('./Easter_trail.geojson');
+const geojsonObject = await fetch('./Easter_trail.geojson');
 
 const vectorSource = new VectorSource({
     features: new GeoJSON().readFeatures(geojsonObject),
